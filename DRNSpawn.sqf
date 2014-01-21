@@ -31,7 +31,7 @@ drnspawn = -1;
 cutText ["","BLACK OUT"];
 _ok = createDialog "DRN_DIALOG";
 waitUntil { drnspawn != -1};
-if (drnspawn == 13) then {drnsspawn = floor (random 12)};
+if (drnspawn == 13) then {drnspawn = floor (random 12)};
 _DRNloc = _DRNLocs select drnspawn;
 	//Spawn modify via mission init.sqf
 	if(isnil "spawnArea") then {
