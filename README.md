@@ -12,3 +12,7 @@ if (dayzPlayerLogin2 select 2) then
 {
     [] execVM "addons\DRNSpawn.sqf";
 };
+
+Then, at the bottom of the description.ext 
+
+#include "addons\DRNdialogs.hpp"
