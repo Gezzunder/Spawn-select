@@ -13,4 +13,12 @@ if (dayzPlayerLogin2 select 2) then
     [] execVM "addons\DRNSpawn.sqf";
 };
 
-Then, at the bottom of the description.ext insert #include "addons\DRNdialogs.hpp"
+Next, at the bottom of your description.ext insert #include "addons\DRNdialogs.hpp"
+
+The next step is within your server.pbo
+
+Locate, within the compiles folder, and look for dayzPlayerLogin2 = [_worldspace,_state]; (it's about line 236)
+
+Change that to dayzPlayerLogin2 = [_worldspace,_state,_randomSpot];
+
+Repack your PBOs (don't forget the path property for the server.pbo) and you're done.
